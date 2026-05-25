@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-gold-400: #D4AF37;
+  --color-gold-500: #C5A028;
+  --color-gold-600: #AA820A;
+
+  --color-dark-100: #f3f4f6;
+  --color-dark-300: #d1d5db;
+  --color-dark-400: #9ca3af;
+  --color-dark-600: #4b5563;
+  --color-dark-800: #1f2937;
+  --color-dark-900: #111827;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    @apply bg-white dark:bg-dark-900 text-dark-600 dark:text-dark-300 transition-colors duration-300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  ::selection {
+    @apply bg-gold-400 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-100 dark:bg-dark-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gold-400 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gold-500;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-8 py-4 bg-gold-400 text-white font-semibold text-sm uppercase tracking-wider hover:bg-gold-600 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-gold-400/30;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white font-semibold text-sm uppercase tracking-wider hover:bg-white hover:text-dark-900 transition-all duration-300;
+  }
+
+  .btn-dark {
+    @apply inline-flex items-center gap-2 px-8 py-4 bg-dark-900 dark:bg-white text-white dark:text-dark-900 font-semibold text-sm uppercase tracking-wider hover:bg-gold-400 hover:text-white dark:hover:bg-gold-400 transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .section-subtitle {
+    @apply inline-block text-sm font-semibold tracking-[3px] uppercase text-gold-500 mb-4;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-dark-900 dark:text-white mb-5;
+  }
+
+  .section-divider {
+    @apply w-20 h-1 bg-gold-400 mb-5;
+  }
+
+  .section-description {
+    @apply max-w-2xl mx-auto text-dark-400 dark:text-dark-300 text-lg;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl;
+  }
+}
