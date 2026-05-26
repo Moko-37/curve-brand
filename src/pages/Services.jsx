@@ -17,7 +17,7 @@ export default function Services() {
       </Helmet>
 
       {/* Page Hero */}
-      <section className="relative h-[60vh] min-h-[400px] flex items-center bg-gradient-to-br from-dark-900/90 to-dark-900/80 bg-[url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=2000&q=80')] bg-cover bg-center">
+      <section className="relative h-[60vh] min-h-[400px] flex items-center bg-gradient-to-br from-dark-900/90 to-dark-900/80 bg-[url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=2000&q=80')] bg-cover bg-center">
         <div className="container-custom relative z-10">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="section-subtitle !text-gold-400">Our Services</span>

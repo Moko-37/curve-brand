@@ -9,7 +9,7 @@ export default function Hero() {
   const { ref: statsRef, inView: statsInView } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-dark-900/90 to-dark-900/80 bg-[url('https://images.unsplash.com/photo-1590725121839-892b458a74fe?w=2000&q=80')] bg-cover bg-center bg-fixed">
+    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-dark-900/90 to-dark-900/80 bg-[url('https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=2000&q=80')] bg-cover bg-center bg-fixed">
       <div className="container-custom relative z-10 py-32">
         <div className="max-w-3xl">
           <motion.span
@@ -69,7 +69,7 @@ export default function Hero() {
                 <span>{statsInView ? stat.number : 0}{stat.suffix}</span>
                 {/* {stat.suffix} */}
               </div>
-              <div className="text-sm text-dark-900 uppercase tracking-[2px]">{stat.label}</div>
+              <div className="text-lg text-dark-900 uppercase tracking-[2px]">{stat.label}</div>
             </div>
           ))}
         </motion.div>
