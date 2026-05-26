@@ -34,7 +34,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.6 }}
-            className="text-lg text-dark-300 max-w-xl mb-10 leading-relaxed"
+            className="text-lg text-dark-500 max-w-xl mb-10 leading-relaxed"
           >
             Premium construction and interior design services by {siteData.company.fullName}. We transform spaces with precision, creativity, and excellence.
           </motion.p>
