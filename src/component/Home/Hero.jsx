@@ -9,7 +9,7 @@ export default function Hero() {
   const { ref: statsRef, inView: statsInView } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-dark-900/90 to-dark-900/80 bg-[url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=2000&q=80')] bg-cover bg-center bg-fixed">
+    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-dark-900/90 to-dark-900/80 bg-[url('https://images.unsplash.com/photo-1590725121839-892b458a74fe?w=2000&q=80')] bg-cover bg-center bg-fixed">
       <div className="container-custom relative z-10 py-32">
         <div className="max-w-3xl">
           <motion.span
@@ -69,16 +69,16 @@ export default function Hero() {
                 <span>{statsInView ? stat.number : 0}{stat.suffix}</span>
                 {/* {stat.suffix} */}
               </div>
-              <div className="text-sm text-dark-300 uppercase tracking-[2px]">{stat.label}</div>
+              <div className="text-sm text-dark-900 uppercase tracking-[2px]">{stat.label}</div>
             </div>
           ))}
         </motion.div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white text-xs tracking-[2px] uppercase">
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center pt-2">
-          <div className="w-1 h-2 bg-white rounded-full animate-bounce" />
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-600 text-xs tracking-[2px] uppercase">
+        <div className="w-6 h-10 border-2 border-slate-600 rounded-full flex justify-center pt-2">
+          <div className="w-1 h-2 bg-slate-600 rounded-full animate-bounce" />
         </div>
         Scroll
       </div>
